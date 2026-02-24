@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
 import "./auth.css";
 
 function Register() {
+  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -11,7 +16,15 @@ function Register() {
       alert("All fields are required");
       return;
     }
+
+    // Simulate registration
     alert("Account Created Successfully!");
+
+    // Automatically log in as user
+    login("user");
+
+    // Redirect to user dashboard
+    navigate("/user");
   };
 
   return (
@@ -55,7 +68,9 @@ function Register() {
           </button>
 
           <div className="auth-link">
-            <a href="/login">Already have an account? Login</a>
+            <Link to="/login">
+              Already have an account? Login
+            </Link>
           </div>
 
         </div>

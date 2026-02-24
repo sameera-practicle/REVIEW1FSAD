@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthContext";
 import "./auth.css";
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -14,11 +16,17 @@ function Login() {
       return;
     }
 
-    // Example logic (you can change later)
-    if (email === "admin@gmail.com") {
-      navigate("/admin");   // Go to Admin Dashboard
-    } else {
-      navigate("/user");    // Go to User Dashboard
+    // Demo authentication logic
+    if (email === "admin@gmail.com" && password === "admin123") {
+      login("admin");        // Save role in context
+      navigate("/admin");
+    } 
+    else if (email === "user@gmail.com" && password === "user123") {
+      login("user");
+      navigate("/user");
+    } 
+    else {
+      alert("Invalid Credentials");
     }
   };
 

@@ -1,91 +1,63 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f3f6fb;
-}
-
-/* Layout */
-.dashboard {
-  display: flex;
+.user-container {
+  padding: 40px 80px;
+  background-color: #f5f7fa;
   min-height: 100vh;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 240px;
-  background: #1e293b;
-  color: white;
-  padding: 30px 20px;
-}
-
-.sidebar h2 {
-  margin-bottom: 40px;
-  font-size: 20px;
-}
-
-.sidebar a {
-  display: block;
-  color: #cbd5e1;
-  text-decoration: none;
-  margin: 15px 0;
-}
-
-.sidebar a:hover {
-  color: white;
-}
-
-/* Main Content */
-.main {
-  flex: 1;
-  padding: 30px;
-}
-
-/* Header */
-.header {
-  font-size: 22px;
-  font-weight: bold;
+.dashboard-title {
+  font-size: 28px;
+  font-weight: 600;
   margin-bottom: 30px;
 }
 
-/* Cards */
-.stats {
+.stats-container {
   display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .stat-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
   flex: 1;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
-}
-
-.stat-card h3 {
-  margin: 0;
-  color: #2563eb;
-}
-
-/* Table */
-.table {
-  background: white;
-  padding: 20px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
-.table table {
+.stat-card h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.workshop-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.workshop-section h2 {
+  margin-bottom: 20px;
+}
+
+.workshop-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.table th, .table td {
+.workshop-table th,
+.workshop-table td {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #eee;
 }
 
-.table th {
-  background: #f8fafc;
+.workshop-table th {
+  background-color: #f1f5f9;
+}
+
+.no-data {
+  color: #777;
 }
