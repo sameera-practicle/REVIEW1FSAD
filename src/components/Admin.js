@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";   // ✅ MISSING IMPORT
-import "../style.css";
 
 function Admin({ workshops }) {
   return (
