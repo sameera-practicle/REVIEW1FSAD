@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles.css";
+import { Link } from "react-router-dom";
+import "./styles.css";
 
 function User({ workshops }) {
   return (
@@ -7,9 +8,9 @@ function User({ workshops }) {
 
       <div className="sidebar">
         <h2>User Panel</h2>
-        <a href="#">Dashboard</a>
-        <a href="#">My Workshops</a>
-        <a href="#">Certificates</a>
+        <Link to="/user">Dashboard</Link>
+        <Link to="/my-workshops">My Workshops</Link>
+        <Link to="/certificates">Certificates</Link>
       </div>
 
       <div className="main">

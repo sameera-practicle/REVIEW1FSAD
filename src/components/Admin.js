@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";   // ✅ MISSING IMPORT
 import "../styles.css";
 
 function Admin({ workshops }) {
@@ -7,10 +8,12 @@ function Admin({ workshops }) {
 
       <div className="sidebar">
         <h2>Admin Panel</h2>
-        <a href="#">Dashboard</a>
-        <a href="#">Workshops</a>
-        <a href="#">Registrations</a>
-        <a href="#">Reports</a>
+
+        {/* ✅ Use valid routes */}
+        <Link to="/admin">Dashboard</Link>
+        <Link to="/workshops">Workshops</Link>
+        <Link to="/registrations">Registrations</Link>
+        <Link to="/reports">Reports</Link>
       </div>
 
       <div className="main">
